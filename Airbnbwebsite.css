@@ -441,39 +441,40 @@ h2{
 }
 
  .end{
-                display: flex;
-                justify-content: space-between; /* pushes left content to left, right content to right */
-                align-items: center; /* keeps them aligned vertically */
-                padding: 10px 20px;
-                border-top: 1px solid #ddd; /* optional, like Airbnb footer */
-                font-size: 14px;
-            }
-            .left{
-                padding: 20px;
-                font-size: 14px;
-                margin-left: 10px;
-                text-decoration: none;
-            }
-            .end .left a,
-            .end .side a{
-                text-decoration: none;
-                color: #222;
-            }
-            .left a:hover{
-                text-decoration-line: underline;
-            }
-            .tick{
-                justify-content: center;
-                align-items: center;
-                vertical-align: middle;
-                padding: 8px;
-            }
-            .end .side {
-                display: flex;
-                gap: 15px; /* spacing between items on the right */
-                align-items: center;
-            }
-            .side a{
-                display: flex;
-                justify-content: flex-end;
-            }
+    display: flex;
+    justify-content: space-between; /* pushes left content to left, right content to right */
+    align-items: center; /* keeps them aligned vertically */
+    padding: 10px 20px;
+    border-top: 1px solid #ddd; /* optional, like Airbnb footer */
+    font-size: 14px;
+}
+.left{
+    padding: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.end .left a,
+.end .side a{
+    text-decoration: none;
+    color: #222;
+}
+.left a:hover{
+    text-decoration-line: underline;
+}
+.tick{
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+.end .side {
+    display: flex;
+    gap: 15px; /* spacing between items on the right */
+    align-items: center;
+}
+.side a{
+    display: flex;
+    justify-content: flex-end;
+}
+
