@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0;
+        }
+        .poll{
+            width: 400%;
+            max-width: 250px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: absolute;
+            margin-top: 13px;
+            right:0%;
+            background-color: white;
+            
+        }
+        .hover1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+        }
+        .hover1 a{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+        }
+        .none a{
+            text-decoration: none;
+            color: #222;
+        }
+        .inside{
+            text-decoration: none;
+            color: #222;
+        }
+        h4{
+            font-size: medium;
+        }
+        .below{
+            color: gray;
+        }
+        .container{
+            width: 400%;
+            max-width: 400px;
+            padding: 30px;
+            margin-bottom: 40px;
+            display: block;
+            border-radius: 12px;
+            border: 0.1px solid rgb(164, 164, 164);
+            justify-content: center;
+            align-items: left;
+            min-height: 100vh;
+            margin-left: 34%;
+            margin-top: 110px;
+        }
+        h3{
+            text-align: center;
+          font-family: sans-serif;
+          font-weight: 5000;
+          font-size: 15px;
+        
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 5px;
+        }
+        label{
+        font-weight: bold;
+        font-size: 14px;
+        }
+        select{
+        border-radius:8px;
+        width: 400px;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-color: black;
+        font-size: 18px;
+        
+
+        }
+
+        
+       input{
+        border-radius:8px;
+        width: 394px;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-color: black;
+        font-size: 18px;
+        
+        }
+        h2{
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            margin: top -20px;
+            
+        }
+        button{
+            width: 400px;
+            height: 50px;
+            border-radius: 8px;
+            background-color:rgb(233, 32, 109); 
+            color: aliceblue;
+            font-size: 16px;
+            border: 0;
+        }
+        .disclaimer{
+            font-size: 12px;
+            color: #717171;
+            margin-top: 5px;
+        }
+        .privacy{
+            font-size: 12px;
+            color:hsl(0, 0%,44%);
+            margin-top: -10px;
+        }
+        .privacy a{
+            color: #222;
+            text-decoration: underline;
+        }
+        
+      .alt-login {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .alt-login div {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #282626;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .alt-login div::before,
+        .alt-login div::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background-color: #ddd;
+            transform: translateY(-50%);
+        }
+
+        .alt-login div::before {
+            left: 0;
+        }
+
+        .alt-login div::after {
+            right: 0;
+        }
+        
+        .alt-login a{
+            display: block;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 10px;
+            color: #222;
+            font-weight: 300;
+            text-decoration: none;
+            font-style: sans-serif;
+        }
+        .alt-login a:hover{
+            background-color: #f0f0f0;
+        }
+        .alt-login button{
+        border-radius: 8px;
+        width: 400px;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-color: black;
+        background-color:white;
+        color: #222;
+        }
+        .alt-login img{
+            margin-right:10px;
+            vertical-align: middle;
+        }
+        .tab{
+            padding-top: 10px;
+
+        }
+        footer{
+            background-color: #f3f3f3;
+            /* height:550px ; */
+        }
+        table,
+            tr,
+            th,
+            td{
+            width: 1200px;
+            text-align: justify;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            height: 30px;
+            margin-left: 30px;
+            padding: 5px;
+            
+            }
+            hr{
+            border: none;
+            height: 0.5px;
+            background-color: rgb(222, 213, 213);
+            margin-left: 30px;
+            margin-right: 30px;
+            }
+            .end{
+                display: flex;
+                justify-content: space-between; /* pushes left content to left, right content to right */
+                align-items: center; /* keeps them aligned vertically */
+                padding: 10px 20px;
+                border-top: 1px solid #ddd; /* optional, like Airbnb footer */
+                font-size: 14px;
+            }
+            .left{
+                padding: 20px;
+                font-size: 14px;
+                margin-left: 10px;
+                text-decoration: none;
+            }
+            .end .left a,
+            .end .side a{
+                text-decoration: none;
+                color: #222;
+            }
+            .left a:hover{
+                text-decoration-line: underline;
+            }
+            .tick{
+                justify-content: center;
+                align-items: center;
+                vertical-align: middle;
+                padding: 8px;
+            }
+            .end .side {
+                display: flex;
+                gap: 15px; /* spacing between items on the right */
+                align-items: center;
+            }
+            .side a{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .up{
+                display: flex;
+                justify-content: space-between; /* pushes left content to left, right content to right */
+                align-items: center; /* keeps them aligned vertically */
+                padding: 20px 30px;
+                border-bottom: 1px solid #ddd; /* optional, like Airbnb footer */
+                font-size: 14px;
+                position: fixed;
+                z-index: 1000;
+                width: 96%;
+                background-color: #ffffff;
+                top:0;
+            }
+            .up-right{
+                display: flex;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+            .up-right img{
+                border-radius: 50%;
+                background-color: #f4f3f3;
+                padding: 10px;
+            }
+            .text{
+                padding:10px ;
+                font-size: 15px;
+            }
+    </style>
+</head>
+
+
+<body>
+    <div class="up">
+        <div class="up-left"><img width="110px" height="35px" src="Screenshot_6.png"> </div>
+        <div class="up-right">
+            <div class="text">Become a host</div>
+            <div><img width="18px" height="18px" src="https://img.icons8.com/?size=100&id=89777&format=png&color=000000"/></div>
+            <div><img onclick="topclick()" width="18px" height="18px" src="https://img.icons8.com/?size=100&id=82749&format=png&color=000000"/></div>
+
+            <div class="poll" id="poll">
+                <div class="hover1">
+                    <nav>
+                    <a href="helpcenter.html" class="inside"> <img width="20px" height="20px" src="https://img.icons8.com/?size=100&id=83244&format=png&color=000000"/> 
+                    <span>Help Center</span>
+                    </a>
+                    </nav>
+                </div>
+                <hr>
+                <div class="hover1">
+                    <div><b>Become a Host</b> <br><span class="below"> It's easy to start hosting and gain exta income</span></div>
+                    <div><img width="48" height="48" src="https://img.icons8.com/color/48/abandoned-house.png" alt="abandoned-house"/> </div>
+                </div>
+                <hr>
+                <h4>Refer a host</h4>
+                <h4>Find a co-host</h4>
+                <h4> Gift card</h4>
+                <hr>
+                <nav class="none">
+                <a href="loginpage.html">Login or Signup</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+   <div class="container">
+    <h3 >Log in or Sign up</h3>
+   <hr>
+    <h2>Welcome to Airbnb</h2>
+    <form action="#" method="post">
+   <p><select id="country" name="country"required>
+        <option>Afghanistan (+93) </option>
+        <option>Albania (+355) </option>
+        <option>Algeria (+213)</option>
+        <option>Bahamas (+1)</option>
+        <option>Bangladesh (+880)</option>
+        <option>Barbados (+1)</option>
+        <option selected>Nigeria (+234)</option>
+        <option>Cameroon (+237)</option>
+        <option>Canada (+1)</option>
+        <option>China (+86)</option>
+        <option>Colombia (+57)</option>
+        <option>Democratic Republic of the Congo (+243)</option>
+        <option>Denmark (+45)</option>
+        <option>Djibouti (+253)</option>
+        <option>Egypt (+20)</option>
+        <option>Equatorial Guinea (+240)</option>
+        <option>Euthiopia (+251)</option>
+        <option>Ghana (+233)</option>
+        <option>Italy (+39)</option>
+        <option>Montserrat (+1)</option>
+        <option selected disabled placeholder="country code">country code</option>
+ </p>
+</select>
+<input name="tel" required type="text" placeholder="phone number">
+<div class="disclaimer">We'll call or text you to confirm your number. Standard message and data rates apply.</div>
+<div class="privacy">
+    <a href="#"> privacy policy</a>
+</div>
+<button type="submit">Continue</button>
+</form>
+<div class="alt-login">
+<!-- <div><button> <img src="data:image/png;base64,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"width="50px" height="40px"></a>Continue with google  </button>
+<p><button> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"width="20px" height="20px"></a>Continue with Apple  </button></p>
+<a href="https://www.gmail.com">Continue with Email</a>
+<a href="https://www.facebook.com">Continue with facebook</a></div> -->
+<div>or</div>
+<a href="https://www.google.com">continue with google</a>
+<a href="https://www.facebook.com">continue with facebook</a>
+<a href="https://www.gmail.com">continue with gmail</a>
+<a href="https://www.apple.com">continue with apple</a>
+</div>
+</div>
+<footer>
+  <table class="tab">
+      <tr>
+         <th>support</th>
+         <th>Hosting</th>
+         <th>Airbnb</th>
+         </tr>
+         <tr>
+            <td>Help Center</td>
+            <td>Airbnb your home</td>
+            <td>2025 Summer Release</td>
+         </tr>
+         <tr>
+            <td>AirCover</td>
+            <td>Airbnb your experience</td>
+            <td>Newsroom</td>
+         </tr>
+         <tr>
+            <td>Anti-discrimination</td>
+            <td>Airbnb your service</td>
+            <td>Careers</td>
+         </tr>
+         <tr>
+            <td>Disability support</td>
+            <td>AirCover for Hosts</td>
+            <td>Investors</td>
+         </tr>
+         <tr>
+            <td>Cancellation options</td>
+            <td>Hosting resources</td>
+            <td>Gift cards</td>
+         </tr>
+         <tr>
+            <td>Report neighborhood concern</td>
+            <td>Community forum</td>
+            <td>Airbnb.org emergency stays</td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Hosting responsibility</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Airbnb-friendly apartments</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Join a free hosting class</td>
+            <td></td>
+         </tr>
+         <tr>
+            <td></td>
+            <td>Find a co-host</td>
+            <td></td>
+         </tr>
+   </table>
+   <!-- <hr> -->
+   <div class="end">
+   <div class="left"> &copy; 2025 Airbnb,inc.
+    <a href="">Terms</a> .
+    <a href="">sitemap</a> .
+    <a href="">pravacy</a> .
+    <a href="">your privacy Choice<img class="tick" src="Screenshot_17.png" width="30px" height="15x"></a> 
+    </div>
+    <div class="side">
+    <a href=""> <img class="internet-icon" width="20px" height="20px" src="https://img.icons8.com/?size=100&id=89777&format=png&color=000000"/> English(US)</a>
+    <a href="">$ USD</a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+    </svg></a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg></a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+   <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+   </svg></a>
+    </div>
+    
+</div>
+<div>Designed by: Odia Benita Egheose</div>
+</footer>
+<script src="airbnb.js"></script>
+</body>
+</html>
