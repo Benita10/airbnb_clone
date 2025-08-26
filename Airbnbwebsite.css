@@ -754,7 +754,10 @@ table{
   color: #555;       
   cursor: pointer;
 }
-
+.down-nav1 a{
+    text-decoration: none;
+    color:#555 ;
+}
 .down-nav1 img {
   display: block;
   margin-bottom: 4px;
@@ -847,6 +850,10 @@ table{
 .down-nav2 .nav-explore2 span {
   color: #e61e4d;                  
   font-weight: bold;
+}
+.down-nav2 a{
+    text-decoration: none;
+    color: #555;   
 }
 
 .down-nav2 div {
