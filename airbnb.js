@@ -1,15 +1,37 @@
- function showMenu(menuId) {
-    // hide all menu tables
-    document.querySelectorAll('.about-item').forEach(item => {
-      item.classList.remove('active');
-    });
+//   function topclick(){
+//     document.getElementById("poll").style.display ="block";
+// }
+//     function body() {
+//     document.getElementById("poll").style.display ="none";
+//   }
 
-    // show the clicked one
-    document.getElementById(menuId).classList.add('active');
+  function topclick() {
+    document.getElementById("poll").classList.toggle("show");
   }
-  function topclick(){
-    document.getElementById("poll").style.display ="block";
-}
-    function body() {
-    document.getElementById("poll").style.display ="none";
+
+  // Close dropdown if clicked outside
+  window.onclick = function(event) {
+    if (!event.target.closest('.icon-wraper')) {
+      let dropdown = document.getElementById("poll");
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    }
   }
+
+  let lastScroll = 0; // store last scroll position
+  const navbar = document.querySelector('.down-nav1');
+
+  window.addEventListener("scroll", function() {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScroll) {
+      // scrolling down
+      navbar.classList.add("hide");
+    } else {
+      // scrolling up
+      navbar.classList.remove("hide");
+    }
+
+    lastScroll = scrollTop <= 0 ? 0 : scrollTop; // avoid negative scroll
+  }, false);

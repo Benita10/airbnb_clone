@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>help center</title>
+    <link rel="shortcut icon" href="icons8-airbnb(pink).png" type="image/x-icon">
     <style>
         body{
             margin: 0;
+            font-family: sans-serif;
         }
         .top{
             display: flex;
@@ -20,6 +22,10 @@
             align-items: center;
             display: flex;
 
+        }
+        .left img{
+            width:40px;
+            height: 40px;
         }
         .left .toptext{
             font-size: medium;
@@ -127,13 +133,16 @@
             font-family:sans-serif;
         }
         .link{
-            display: flex;
-            gap:20px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:10px;
             margin-left: 80px;
             margin-right: 80px;
         }
         .link img{
             border-radius: 15px;
+            width: 220px;
+            height: 220px;
         }
         .link a{
             text-decoration: none;
@@ -159,7 +168,7 @@
         .articlebottom {
             color: gray;
             border-bottom: 1px solid rgb(180, 179, 179);
-            padding-bottom: 30px;
+            padding-bottom: 28px;
 
         }
         .articlebottom1 {
@@ -175,17 +184,17 @@
             background-color: black;
             font-family: sans-serif;
             color: white;
-            margin-top: 30px;
-            padding-top: 30px;
+            margin-top: 80px;
+            padding-top: 80px;
             padding-bottom: 30px;
         }
         .explore{
             display: grid;
             grid-template-columns: auto auto auto;
             margin-right: 80px;
-            margin-left: 80px;
+            margin-left: 40px;
             justify-content: space-between;
-            column-gap: 30px;
+            column-gap: 15px;
         }
         .explore a{
             text-decoration: none;
@@ -195,6 +204,8 @@
             border-start-start-radius: 10px;
             border-start-end-radius: 10px;
             margin-bottom: 0;
+            width:330px;
+            height:250px;
         }
         .exploreimg .text{
             background-color: rgb(43, 43, 43);
@@ -219,9 +230,9 @@
             background-color:white;
             padding: 20px;
             border-radius: 10px;
-            justify-self: center;
-            padding-left: 150px;
-            padding-right: 150px;
+            text-align: center;
+            padding-left: 100px;
+            padding-right: 100px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -247,7 +258,7 @@
             tr,
             th,
             td{
-            width: 1200px;
+            width: 60rem;
             text-align: justify;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
@@ -271,18 +282,18 @@
                 border-top: 1px solid #ddd; /* optional, like Airbnb footer */
                 font-size: 14px;
             }
-            .left{
+            .left-under{
                 padding: 20px;
                 font-size: 14px;
                 margin-left: 10px;
                 text-decoration: none;
             }
-            .end .left a,
+            .end .left-under a,
             .end .side a{
                 text-decoration: none;
                 color: #222;
             }
-            .left a:hover{
+            .left-under a:hover{
                 text-decoration-line: underline;
             }
             .tick{
@@ -300,15 +311,659 @@
                 display: flex;
                 justify-content: flex-end;
             }
+            .login-laptop{
+                display: none;
+            }
+            .explore-more1{
+                display: none;
+            }
+            .end2{
+                display: none;
+            }
+            .left2{
+                display: none;
+            }
+             .middlebottom1{
+            display: none;
+        }
+        .link-tab{
+            display: none;
+        }
+         .phone-foot{
+            display: none;
+        }
+        .phone-footer{
+            display: none;
+        }
 
+    @media (max-width: 1044px){
+        .login{
+            display: none;
+        }
+        .login-laptop{
+            display: block;
+            background-color: rgb(237, 67, 95);
+            padding: 20px 100px;
+            border-radius: 10px;
+            margin-left: 80px;
+            margin-right: 80px;
+            font-size: medium;
+            margin-top: 30px;            
+            text-align: center;
+        }
+        .login-laptop a{
+            color: white; 
+            text-decoration: none;
+        }
+        h2{
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .link{
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-left: 30px;
+            margin-right: 80px;
+        }
+        .link img{
+            border-radius: 15px;
+            width: 350px;
+            height: 260px;
+        }
+        .link a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            font-size:larger;
+        }
+        .article{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .articletop{
+            color: black;
+            text-decoration: underline;
+            font-size: larger;
 
+        }
+        .articlebottom {
+            color: gray;
+            border-bottom: 1px solid rgb(180, 179, 179);
 
+        }
+        .articlebottom1 {
+            color: gray;
+            border-bottom: 1px solid rgb(180, 179, 179);
+            padding-bottom: 50px;
+
+        }
+        .article a{
+            text-decoration: none;
+        }
+        .explore-more{
+                display: none;
+        }
+        .explore-more1{
+            display: block;
+            background-color: black;
+            font-family: sans-serif;
+            color: white;
+            margin-top: 80px;
+            padding-top: 80px;
+            padding-bottom: 30px;
+        }.explore{
+            margin-left: 80px;
+        }
+        .contact-us{
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+        .contact-us .contact-us1{
+            font-size:x-large;
+            font-weight: bold;
+        }
+        .contact-us .contact-us2{
+            font-size:large;
+        }
+        .contact-us .contactus1{
+            background-color:white;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 60%;
+        }
+        .contactus1 a{
+            color: black;
+            text-decoration: none;
+        }
+        .feedback a{
+            color: white;
+        }
+        table,
+            tr,
+            th,
+            td{
+            width: 45rem;
+            text-align: justify;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            height: 30px;
+            margin-left: 30px;
+            padding: 5px;
+            
+            }
+            .end2{
+                display: none;
+            }
+            .left2{
+                display: none;
+            }
+             .middlebottom1{
+            display: none;
+        }
+        .link-tab{
+            display: none;
+        }
+         .phone-foot{
+            display: none;
+        }
+            
+    }
+
+     @media (max-width: 820px){
+         .login{
+            display: none;
+        }
+        .login-laptop{
+            display: block;
+            background-color: rgb(237, 67, 95);
+            padding: 20px 100px;
+            border-radius: 10px;
+            margin-left: 30px;
+            margin-right: 30px;
+            font-size: medium;
+            margin-top: 30px;            
+            text-align: center;
+        }
+        .login-laptop a{
+            color: white; 
+            text-decoration: none;
+        }
+        h2{
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .link{
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .link img{
+            border-radius: 15px;
+            width: 300px;
+            height: 260px;
+        }
+        .link a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            font-size:larger;
+        }
+        .article{
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-left: 30px;
+        }
+        .articletop{
+            color: black;
+            text-decoration: underline;
+            font-size: larger;
+
+        }
+        .articlebottom {
+            color: gray;
+            border-bottom: 1px solid rgb(180, 179, 179);
+            padding-bottom: 20px;
+        }
+        .articlebottom1 {
+            color: gray;
+            border-bottom: 1px solid rgb(180, 179, 179);
+            padding-bottom: 15px;
+        }
+        .article a{
+            text-decoration: none;
+        }
+        .explore-more{
+                display: none;
+        }
+        h2{
+            margin-left: 30px;
+        }
+        .explore-more1{
+            display: block;
+            background-color: black;
+            font-family: sans-serif;
+            color: white;
+            margin-top: 80px;
+            padding-top: 80px;
+            padding-bottom: 30px;
+        }
+        .explore{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-right: 30px;
+            margin-left: 30px;
+            justify-content: space-between;
+            column-gap: 15px;
+        }
+
+        .contact-us{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .contact-us .contact-us1{
+            font-size:x-large;
+            font-weight: bold;
+        }
+        .contact-us .contact-us2{
+            font-size:large;
+        }
+        .contact-us .contactus1{
+            background-color:white;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 60%;
+        }
+        .contactus1 a{
+            color: black;
+            text-decoration: none;
+        }
+        .feedback a{
+            color: white;
+        }
+        table,
+            tr,
+            th,
+            td{
+            width: 40rem;
+            text-align: justify;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            height: 30px;
+            margin-left: 30px;
+            padding: 5px;
+            
+            }
+        .end{
+            display: none;
+        }
+        .end2{
+            display: flex;
+            justify-content: space-between; /* pushes left content to left, right content to right */
+            align-items: center; /* keeps them aligned vertically */
+            padding: 10px;
+            border-top: 1px solid #ddd; /* optional, like Airbnb footer */
+            font-size: 14px;
+            margin-bottom: 0;
+
+        }
+                
+        .end2 .left1 a,
+        .end2 .side1 a{
+            text-decoration: none;
+            color: #222;
+        }
+            .end2 .side1 {
+            display: flex;
+            gap: 15px; /* spacing between items on the right */
+            align-items: center;
+        }
+        .side1 a{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .left2 a:hover{
+            text-decoration-line: underline;
+        }
+        .left2{
+            display: block;
+            padding: 10px;
+            font-size: 14px;
+            margin-left: 10px;
+            text-decoration: none;
+            margin-top: 0;
+        }
+        .left2 a{
+            text-decoration: none;
+            color: #222;
+        }
+        .tick{
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            padding: 8px;
+        }
+        .middlebottom1{
+            display: none;
+        }
+        .link-tab{
+            display: none;
+        }
+        .phone-foot{
+            display: none;
+        }
+    }
+      @media (max-width: 730px){
+        .top .right{
+            display: none;
+        }
+       
+        .left{
+            padding: 20px;
+            font-size: 14px;
+            margin-left: 20px;
+            align-items: center;
+            display: flex;
+
+        }
+        .left img{
+            width:35px;
+            height: 35px;
+        }
+        .left .toptext{
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight:bold;
+        }
+        .middletop{
+            font-size: 30px;
+            justify-self:flex-start;
+            font-weight:50;
+            margin-left: 60px;
+        }
+        .middlebottom{
+            display: none;
+        }
+         .middlebottom1{
+            justify-self: center;
+            align-items: center;
+            display: flex;
+            gap: 1px;
+            text-align: center;
+            border-radius: 50px;
+            background-color: rgb(247, 247, 247);
+            border: 1px solid rgb(230, 227, 227);
+            padding: 0.1% 20%;
+            top: 0;
+        }
+        .middlebottom1 p{
+            font-family: sans-serif;
+            font-size: medium;
+            padding-left: 20px;
+            text-align: center;
+        }
+        .middlebottom1 img{
+            cursor: pointer;
+            text-align: center;
+        }
+        .enter{
+            margin-left: 40px;
+            font-size: 14px;
+        }
+        .login-laptop{
+            margin-left: 40px;
+        }
+        .link{
+            display: none;
+        }
+        .link-tab {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #d5d4d4;
+            margin-left: 20px;
+        }
+
+        .link-tab a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #222;
+            gap: 12px;
+        }
+
+        .link-tab img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .link-tab span {
+            font-size: 18px;
+            font-family: 'Manrope', sans-serif;
+        }
+         .article{
+            display:block;
+            margin-left: 20px;
+        }
+        .articletop{
+            color: black;
+            text-decoration: underline;
+            font-size: larger;
+            padding: 10px;
+
+        }
+        .articlebottom {
+            color: gray;
+            border-bottom: 1px solid rgb(180, 179, 179);
+            padding-bottom: 20px;
+            padding: 10px;
+        }
+        .articlebottom1 {
+            color: gray;
+            border-bottom: 1px solid rgb(180, 179, 179);
+            padding-bottom: 15px;
+            padding: 10px;
+        }
+        .article a{
+            text-decoration: none;
+        }
+        .explore-more{
+                display: none;
+        }
+        .explore-more1{
+            padding-top: 5px;
+        }
+        .explore{
+            display: block;
+            margin-left: 30px;
+            row-gap: 15px;
+            
+        }
+        .explore a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+
+        }
+        .exploreimg{
+            margin-bottom: 25px;
+        }
+        .exploreimg img{
+            border-start-start-radius: 0;
+            border-start-end-radius: 0;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            margin-bottom: 0;
+            width:110px;
+            height:110px;           
+           
+        }
+        .exploreimg .text{
+            background-color: rgb(43, 43, 43);
+            padding-bottom: 0;
+            align-items: center;
+            /* padding-top: 7px; */
+            margin-top: 0;
+            border-end-end-radius: 0;
+            border-end-start-radius: 0;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 34px; 
+            font-size: small;
+        }
+        .exploreimg .text1{
+            font-size: medium;
+        }
+        table{
+            display: none;
+        }
+        .phone-foot{
+            display: grid;
+            padding: 50px;
+            gap: 13px;
+            margin-left: 10px;
+        }
+        .phone-foot a{
+            text-decoration: none;
+            color: #222;
+            font-size:15px;
+        }
+        .phone-foot p{
+            font-size: medium;
+            font-weight: bold;
+        }
+      }
+      @media(max-width:440px){
+         .enter{
+            display: flex;
+            gap:25px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 50px;
+            border-bottom: 1px solid rgb(199, 199, 199);
+            font-size: 11px;
+        }
+        .enter1{
+            text-decoration: underline;
+            text-decoration-thickness: 2px; 
+            text-underline-offset: 13px; 
+        }
+        .enter2{
+            color: grey;
+            cursor: pointer;
+        }
+        .contact-us .contact-us1{
+            font-size: 18px;
+        }
+        .contact-us .contact-us2{
+            font-size: 13px;
+        }
+      }
+      @media(max-width:380px){
+        .middletop{
+            font-size: larger;
+        }
+        .enter{
+            font-size: 10px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            gap: 36px;
+        }
+        .enter1{
+            text-decoration: underline;
+            text-decoration-thickness: 2px; 
+            text-underline-offset: 22px; 
+        }
+        .login-laptop{
+            font-size: small;
+        }
+        h2{
+            font-size:larger;
+        }
+        .article{
+            margin-right: 30px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            margin-left: 30px;
+        }
+        .articlebottom1{
+            padding-bottom: 20px;
+        }
+         .exploreimg .text{
+            padding: 25px; 
+            font-size: small;
+         }
+         .end2{
+            display: none;
+         }
+         .left2{
+            display: none;
+         }
+
+         .phone-footer{
+            display: block;
+        }
+        .phone-footer a{
+            text-decoration: none;
+            color: #222;
+        }
+        .under-top a{
+            gap: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .under-top{
+            margin-left: 17px;
+        }
+        .under-middle a{
+            padding: 10px;
+        }
+        .under-middle{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .left1{
+            padding: 20px;
+            font-size: 14px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+      }
+      @media(max-width:320px){
+        .login-laptop{
+            display: block;
+            background-color: rgb(237, 67, 95);
+            padding: 20px 100px;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 13px;
+            margin-top: 30px;            
+            text-align: center;
+        }
+        
+        .exploreimg .text{
+            padding: 20px; 
+            font-size: small;
+         }
+      }
+
+            
     </style>
 </head>
 <body>
     <div class="top">
         <div class="left">
-            <img width="40px" height="40px" src="icons8-airbnb.svg"/>
+            <img src="icons8-airbnb.svg"/>
             <span class="toptext">Help center</span>
         </div>
         <div class=right>
@@ -325,6 +980,12 @@
             <img width="50" height="50" src="Screenshot_7.png" alt="search"/>
         </div>
 
+        <!-- tablet repo -->
+         <div class="middlebottom1">
+            <img width="20" height="20" src="icons8-search(pink).svg" alt="search"/> 
+            <p>Search help</p>
+        </div>
+         <!-- end of repo -->
         <div class="enter">
             <p class="enter1">Guest</p>
             <p class="enter2">Home host</p>
@@ -342,29 +1003,67 @@
                 <a href="loginpage.html">Log in or Sign up</a>
             </nav>
         </div>
+
+        <!-- small laptop repo -->
+         <nav class="login-laptop">
+                <a href="loginpage.html">Log in or Sign up</a>
+            </nav>
+         <!-- end of repo -->
         <h2>Guides for getting started</h2>
         <div class="link">
             <nav>
-                <a href=""><img width="250px" height="250px" src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/bltfbcc7f32e0cd6ff5/617b2ba9b187491e7c56dfca/getting-started-on-airbnb-optimized.jpg"/>
+                <a href=""><img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/bltfbcc7f32e0cd6ff5/617b2ba9b187491e7c56dfca/getting-started-on-airbnb-optimized.jpg"/>
                 <div>Getting started on airbnb</div>
                 </a>
             </nav>
             <nav>
-               <a href="" ><img width="250px" height="250px" src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt7b9def132e4aa927/help-with-a-reservation-optimized.jpg"/>
+               <a href="" ><img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt7b9def132e4aa927/help-with-a-reservation-optimized.jpg"/>
                 <div> Managing your reservation:<br>payments, charges and reservation.</div>
                 </a>
             </nav>
             <nav>
-                <a href=""><img width="250px" height="250px" src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt5912675266dfa56f/AC_Guests_HG_EN_S@3x.png"/>
+                <a href=""><img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt5912675266dfa56f/AC_Guests_HG_EN_S@3x.png"/>
                 <div>AirCover for guests</div>
                 </a>
             </nav>
             <nav>
-                <a href=""><img width="250px" height="250px" src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/bltc2c41caec93eaf03/help-with-hosting-optimized.jpg"/> 
+                <a href=""><img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/bltc2c41caec93eaf03/help-with-hosting-optimized.jpg"/> 
                 <div>Getting started as a new host</div> 
                 </a>
             </nav>
         </div>
+        <!-- tablet repo -->
+         <div class="link-tab">
+            <a href=""><img src="icons8-calendar-64.png"/>
+                <span>Managing your reservation: payments, charges and reservation.</span> </a>
+            <div><img src="icons8-forward-24.png"/></div>
+         </div>
+
+         <div class="link-tab">
+            <a href=""><img src="icons8-gingerbread-house-24.png"/>
+                <span>AirCover for guests</span> </a>
+            <div><img src="icons8-forward-24.png"/></div>
+         </div>
+
+         <div class="link-tab">
+            <a href=""><img src="icons8-home-50.png"/>
+                <span>Essential resources for new host</span> </a>
+            <div><img src="icons8-forward-24.png"/></div>
+         </div>
+
+         <div class="link-tab">
+            <a href=""><img src="icons8-briefcase-48.png"/>
+                <span>Getting started as a guest on Airbnb</span> </a>
+            <div><img src="icons8-forward-24.png"/></div>
+         </div>
+
+         <div class="link-tab">
+            <a href="">
+                <span>Browse all topics</span> </a>
+            <div><img src="icons8-forward-24.png"/></div>
+         </div>
+
+         <!-- end of repo -->
 
         <h2>Top articles</h2>
         <div class="article">
@@ -389,19 +1088,19 @@
             <nav>
                 <a href="">
                     <div class="articletop">Payment methods accepted </div>
-                    <div class="articlebottom">Airbnb accepts a variety of payment methods. However, your available option will vary by...</div>
+                    <div class="articlebottom1">Airbnb accepts a variety of payment methods. However, your available option will vary by...</div>
                 </a>
             </nav>
             <nav>
                 <a href="">
                     <div class="articletop">Add or remove a payment method </div>
-                    <div class="articlebottom">If an existing payment method on your account is incorrect(ex: an expired credit card...</div>
+                    <div class="articlebottom1">If an existing payment method on your account is incorrect(ex: an expired credit card...</div>
                 </a>
             </nav>
             <nav>
                 <a href="">
                     <div class="articletop">When you'll pay for your reservation </div>
-                    <div class="articlebottom">Want to know when you'll be charged for a reservation? It all depends on the type of...</div>
+                    <div class="articlebottom1">Want to know when you'll be charged for a reservation? It all depends on the type of...</div>
                 </a>
             </nav>
         </div>
@@ -411,7 +1110,7 @@
             <div class="explore">
                 <nav class="exploreimg">
                 <a href="">
-                    <img width="330px" height="250px" src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt6a2935c750dda8a0/6179c6499778eb18575b3c0b/Airbnb-Policy-Web.png"/>
+                    <img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt6a2935c750dda8a0/6179c6499778eb18575b3c0b/Airbnb-Policy-Web.png"/>
                     <div class="text">
                         <div class="text1">Our community policies</div>
                         <div>How we build a foundation of trust.</div>
@@ -420,9 +1119,9 @@
             </nav>
             <nav class="exploreimg">
                 <a href="">
-                    <img width="330px" height="250px" src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt93efaa7b7d28041c/Airbnb-Safety-Web.png"/>
+                    <img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt93efaa7b7d28041c/Airbnb-Safety-Web.png"/>
                    <div class="text">
-                        <div class="text1">Safty tips and guidelines</div>
+                        <div class="text1">Safety tips and guidelines</div>
                         <div>Resources to help travelers stay safe.</div>
                     </div>
                 </a>
@@ -437,6 +1136,40 @@
             </div>
             </div>
         </div>
+        <!-- small laptop repo -->
+         <div class="explore-more1">
+            <h2> Explore more</h2>
+            <div class="explore">
+                <nav class="exploreimg">
+                <a href="">
+                    <img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt6a2935c750dda8a0/6179c6499778eb18575b3c0b/Airbnb-Policy-Web.png"/>
+                    <div class="text">
+                        <div class="text1">Our community policies</div>
+                        <div>How we build a foundation of trust.</div>
+                    </div>
+                </a>
+                </nav>
+                <nav class="exploreimg">
+                    <a href="">
+                        <img src="https://images.contentstack.io/v3/assets/bltec2ed8e3c4b1e16d/blt93efaa7b7d28041c/Airbnb-Safety-Web.png"/>
+                    <div class="text">
+                            <div class="text1">Safety tips and guidelines</div>
+                            <div>Resources to help travelers stay safe.</div>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="contact-us">
+                <div class="contact-us1">Need to stay in touch?</div>
+                <div class="contact-us2">We'll start with some questions and get you to the right place.</div>
+                <nav class="contactus1">
+                <a href="contactus.html">Contact us</a></nav>
+                <div class="feedback">You can also<nav><a href="">give us feedback</a></nav>
+                </div>
+            </div>
+            
+        </div>
+         <!-- end of repo -->
         <footer>
             <table class="tab">
             <tr>
@@ -495,9 +1228,42 @@
                     <td></td>
                 </tr>
         </table>
+        <!-- tablet repo -->
+          <nav class="phone-foot">
+            <p>Support</p>
+            <a href="">Health center</a>
+            <a href="">Get help with a safety issue</a>
+            <a href="">AirCover</a>
+            <a href="">Anti-discrimination</a>
+            <a href="">Disability support</a>
+            <a href="">Cancellation option</a>
+            <a href="">Report neighborhood concern</a>
+            <hr>
+            <p>Hosting</p>
+            <a href="">Airbnb your home</a>
+            <a href="">Airbnb your Experience</a>
+            <a href="">Airbnb your service</a>
+            <a href="">AirCover for Hosts</a>
+            <a href="">Hosting resources</a>
+            <a href="">Community forum</a>
+            <a href="">Hosting responsibility</a>
+            <a href="">Airbnb-friendly apartments</a>
+            <a href="">Join a free hosting class</a>
+            <a href="">Find a co-host</a>
+            <hr>
+            <p>Airbnb</p>
+            <a href="">2025 summer release</a>
+            <a href="">Newsroom</a>
+            <a href="">Careers</a>
+            <a href="">Investors</a>
+            <a href="">Gift cards</a>
+            <a href="">Airbnb.org emergency stays</a> 
+        </nav>
+        <!-- end of repo -->
+
         <!-- <hr> -->
         <div class="end">
-        <div class="left"> &copy; 2025 Airbnb,inc.
+        <div class="left-under"> &copy; 2025 Airbnb,inc.
             <a href="">Terms</a> .
             <a href="">sitemap</a> .
             <a href="">pravacy</a> .
@@ -518,6 +1284,61 @@
             </div>
             
 </div>
+
+<!-- tablet repo -->
+ <div class="end2">  
+    <div class="left1">
+    <a href=""> <img class="internet-icon" width="20px" height="20px" src="https://img.icons8.com/?size=100&id=89777&format=png&color=000000"/> English(US)</a>
+    <a href="">$ USD</a>
+    </div>
+
+    <div class="side1">
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+    </svg></a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg></a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+   <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+   </svg></a>
+    </div>
+ </div>
+   <div class="left2"> &copy; 2025 Airbnb,inc.
+    <a href="">Terms</a> .
+    <a href="">sitemap</a> .
+    <a href="">pravacy</a> .
+    <a href="">your privacy Choice<img class="tick" src="Screenshot_17.png" width="30px" height="15x"></a> 
+    </div>
+  <!-- end of tablet repo -->
+
+  <!-- mobile footer repo -->
+   <hr>
+    <nav class="phone-footer">
+    <div class="under-top">
+        <a href=""> <img class="internet-icon" width="20px" height="20px" src="https://img.icons8.com/?size=100&id=89777&format=png&color=000000"/> English(US)</a>
+        <a href="">$ USD</a>
+    </div>
+    <div class="under-middle">
+        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+    </svg></a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg></a>
+    <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+   <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+   </svg></a>
+    </div>
+    
+    <div class="left1"> &copy; 2025 Airbnb,inc.<br>
+    <a href="">Terms</a> .
+    <a href="">sitemap</a> .
+    <a href="">pravacy</a> .
+    <a href="">your privacy Choice<img class="tick" src="Screenshot_17.png" width="30px" height="15x"></a> 
+    </div>
+ </nav>
+   <!-- end of moblie repo -->
 <div>Designed by: Odia Benita Egheose</div>
 </footer>
 </body>
