@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whishlist</title>
+    <link rel="shortcut icon" href="icons8-airbnb(pink).png" type="image/x-icon">
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+        }
+         .up{
+                display: flex;
+                justify-content: space-between; /* pushes left content to left, right content to right */
+                align-items: center; /* keeps them aligned vertically */
+                padding: 20px 30px;
+                border-bottom: 1px solid #ddd; /* optional, like Airbnb footer */
+                font-size: 14px;
+                position: fixed;
+                z-index: 1000;
+                width: 96%;
+                background-color: #ffffff;
+                top:0;
+            }
+            .up-right{
+                display: flex;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+            .up-right img{
+                border-radius: 50%;
+                background-color: #f4f3f3;
+                padding: 10px;
+            }
+             .text{
+                padding:10px ;
+                font-size: 15px;
+            }
+             .poll{
+            width: 400%;
+            max-width: 250px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: absolute;
+            margin-top: 13px;
+            right:0%;
+            background-color: white;
+            
+        }
+        .hover1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+        }
+        .hover1 a{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+        }
+        .none a{
+            text-decoration: none;
+            color: #222;
+        }
+        .inside{
+            text-decoration: none;
+            color: #222;
+        }
+         h4{
+            font-size: medium;
+            margin-top: 10%;
+            margin-left: 70px;
+            color: #D4327E;
+        }
+        .below{
+            color: gray;
+        }
+        h3{
+            margin-top: 130px;
+            margin-left: 70px;
+            font-size: xx-large;
+        }
+        .wishlist{
+            margin-left: 70px;
+            font-size: x-large;
+        }
+        .wish{
+            color: grey;
+            margin-left: 70px;
+        }
+        .login{
+            margin-left: 70px;
+            margin-right: 70%;
+            background-color: rgb(233, 32, 109);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        .login a{
+            text-decoration: none;
+            color: white;
+        }
+        .down-nav2{
+            display: none;
+        }
+        @media(max-width:1024px){
+            .up{
+                display: none;
+            }
+            h3{   
+                margin-top: 30px;
+                margin-left: 50px;
+            }
+            .wish{
+                margin-left: 50px;
+            }
+            .wishlist{
+                margin-left: 50px;
+            }
+            .login{
+                margin-left: 50px;
+            }
+            h4{
+                margin-bottom: 50px;
+                margin-top: 10%;
+                margin-left: 50px;
+            }
+            .down-nav2{
+                    display: block;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 50px;                      
+                    display: flex;
+                    justify-content: space-around; 
+                    align-items: center;
+                    background-color: #fff;            
+                    border-top: 1px solid #ddd;       
+                    z-index: 1000;        
+                }
+                
+                .down-nav2 a img{
+                    justify-self: center;
+                }
+                .nav-explore2 a{
+                    text-decoration: none;
+                    color: #D4327E;
+                    font-weight: bold;
+                }
+
+                .down-nav2 div {
+                    display: flex;
+                    flex-direction: column;           
+                    align-items: center;
+                    text-align: center;
+                    font-size: 12px;                 
+                    color: #555;       
+                    cursor: pointer;
+                }
+                 .backhome a{
+                    color: #555;
+                    text-decoration: none;
+                }
+
+                .down-nav2 img {
+                    display: block;
+                    margin-bottom: 3px;
+                }
+        }
+          @media(max-width:500px){
+            h3{
+                margin-left: 30px;
+            }
+            .wishlist{
+                margin-left: 30px;
+                font-size: medium;
+            }
+            .wish{
+                margin-left: 30px;
+                font-size: small;
+            }
+            .login{
+                margin-left: 30px;
+                padding: 15px;
+                margin-right: 60%;
+
+            }
+            h4{
+                margin-left: 30px;
+                margin-top: 30%;
+            }
+          }
+    </style>
+</head>
+<body>
+     <div class="up">
+        <div class="up-left"><img width="110px" height="35px" src="Screenshot_6.png"> </div>
+        <div class="up-right">
+            <div class="text">Become a host</div>
+            <div><img width="18px" height="18px" src="https://img.icons8.com/?size=100&id=89777&format=png&color=000000"/></div>
+            <div><img onclick="topclick()" width="18px" height="18px" src="https://img.icons8.com/?size=100&id=82749&format=png&color=000000"/></div>
+
+            <div class="poll" id="poll">
+                <div class="hover1">
+                    <nav>
+                    <a href="helpcenter.html" class="inside"> <img width="20px" height="20px" src="https://img.icons8.com/?size=100&id=83244&format=png&color=000000"/> 
+                    <span>Help Center</span>
+                    </a>
+                    </nav>
+                </div>
+                <hr>
+                <div class="hover1">
+                    <div><b>Become a Host</b> <br><span class="below"> It's easy to start hosting and gain exta income</span></div>
+                    <div><img width="48" height="48" src="https://img.icons8.com/color/48/abandoned-house.png" alt="abandoned-house"/> </div>
+                </div>
+                <hr>
+                <h4>Refer a host</h4>
+                <h4>Find a co-host</h4>
+                <h4> Gift card</h4>
+                <hr>
+                <nav class="none">
+                <a href="loginpage.html">Login or Signup</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <h3>Wishlists</h3>
+    <p class="wishlist">Log in to view your Wishlist</p>
+    <p class="wish">You can create, view, or edit wishlists once you've logged in.</p>
+    <nav class="login">
+        <a href="loginpage.html">Log in</a>
+    </nav>
+
+    <!-- nav bar -->
+    <section class="down-nav2">
+    <div class="backhome">
+        <a href="index.html">
+        <img width="20px" height="20px" src="icons8-search(grey).svg"/>
+        <span>Explore</span>
+        </a>
+    </div>
+    <div class="nav-explore2">
+        <a href="wishlist.html">
+        <img width="20px" height="20px" src="icons8-heart-50.png"/>
+        <span>Wishlist</span>
+        </a>
+    </div>
+    <div class="backhome">
+        <img width="20px" height="20px" src="icons8-profile-48.png"/>
+        <span><a href="loginpage.html"> Login</a></span>
+    </div>
+</section>
+
+<h4>Designed by: Odia Benita Egheose</h4>
+    <script src="loginpage.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@
         body{
             font-family: sans-serif;
             margin: 0;
+            margin-bottom: 50px;
         }
         .poll{
             width: 400%;
@@ -508,7 +509,7 @@
 
                 }
                  button{
-                    width: 423px;
+                    width: 413px;
                     height: 50px;
                     border-radius: 8px;
                     background-color:rgb(233, 32, 109); 
@@ -530,7 +531,7 @@
                     height: 50px;
                 }
                 .alt-login a{
-                    width: 400px;
+                    width: 380px;
                 }
                 .alt-login div {
                     margin: 10px 0;
@@ -553,15 +554,13 @@
                     border-top: 1px solid #ddd;       
                     z-index: 1000;        
                 }
-                .down-nav2 a{
-                    text-decoration: none;
-                    color: #222;
-                }
+                
                 .down-nav2 a img{
                     justify-self: center;
                 }
-                .down-nav2 .nav-explore2 span {
-                    color: #D4327E;                  
+                .nav-explore2 a{
+                    text-decoration: none;
+                    color: #D4327E;
                     font-weight: bold;
                 }
 
@@ -573,6 +572,10 @@
                     font-size: 12px;                 
                     color: #555;       
                     cursor: pointer;
+                }
+                 .backhome a{
+                    color: #555;
+                    text-decoration: none;
                 }
 
                 .down-nav2 img {
@@ -592,6 +595,64 @@
                     display: block;
                 }
 
+            }
+            @media(max-width:390px){
+                 select{
+                    border-radius:8px;
+                    width: 279px;
+                    height: 50px;
+                    margin-left: 10px;
+                }
+
+                    
+                input{
+                    border-radius:8px;
+                    width: 275px;
+                    height: 50px;
+                    margin-left: 10px;
+                }
+                 button{
+                    width: 300px;
+                    height: 50px;
+                    border-radius: 8px;
+                    background-color:rgb(233, 32, 109); 
+                    color: aliceblue;
+                    font-size: 16px;
+                    border: 0;
+                    justify-content: center;
+                    margin-left: 10px;
+                }
+                .alt-login a{
+                    width: 285px;
+                    margin-left: 10px;
+                }
+            }
+            @media(max-width:340px){
+                 select{
+                    border-radius:8px;
+                    width: 250px;
+                    height: 50px;
+                }
+
+                    
+                input{
+                    border-radius:8px;
+                    width: 245px;
+                    height: 50px;
+                }
+                 button{
+                    width: 270px;
+                    height: 50px;
+                    border-radius: 8px;
+                    background-color:rgb(233, 32, 109); 
+                    color: aliceblue;
+                    font-size: 16px;
+                    border: 0;
+                    justify-content: center;
+                }
+                .alt-login a{
+                    width: 245px;
+                }
             }
 
     </style>
@@ -877,15 +938,17 @@
     <a href="">need any help?</a>
 </div>
 <section class="down-nav2">
-    <div>
+    <div class="backhome">
         <a href="index.html">
         <img width="20px" height="20px" src="icons8-search(grey).svg"/>
-        <span><a href="index.html">Explore</a></span>
+        <span>Explore</span>
         </a>
     </div>
-    <div>
+    <div class="backhome">
+        <a href="wishlist.html">
         <img width="20px" height="20px" src="icons8-favorite-50.png"/>
         <span>Wishlist</span>
+        </a>
     </div>
     <div class="nav-explore2">
         <img width="20px" height="20px" src="icons8-profile(pink).png"/>

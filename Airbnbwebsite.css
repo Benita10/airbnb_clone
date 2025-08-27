@@ -480,6 +480,10 @@ h2{
     display: flex;
     justify-content: flex-end;
 }
+.Designed-by{
+    margin-bottom: 50px;
+    color: #bd1d42;
+}
 .phone-foot{
     display: none;
 }
@@ -572,26 +576,29 @@ h2{
     margin-left: 20px;
     
     }
-    .down-nav2{
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 50px;                      
-        display: flex;
-        justify-content: space-around; 
-        align-items: center;
-        background-color: #fff;            
-        border-top: 1px solid #ddd;       
-        z-index: 1000;        
-    }
-.down-nav2 .nav-explore2 span {
+    .down-nav1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;                      
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  background-color: #fff;            
+  border-top: 1px solid #ddd;       
+  z-index: 1000;  
+  transition: transform 0.3s ease; /* smooth hide/show for the scroll effect */               
+}
+.down-nav1.hide {
+  transform: translateY(100%);  /* hides the nav bar */
+}
+.down-nav1 .nav-explore span {
   color: #e61e4d;                  
   font-weight: bold;
 }
 
-.down-nav2 div {
+.down-nav1 div {
   display: flex;
   flex-direction: column;           
   align-items: center;
@@ -600,10 +607,13 @@ h2{
   color: #555;       
   cursor: pointer;
 }
-
-.down-nav2 img {
+.down-nav1 a{
+    text-decoration: none;
+    color:#555 ;
+}
+.down-nav1 img {
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 }
 @media (max-width: 800px){
